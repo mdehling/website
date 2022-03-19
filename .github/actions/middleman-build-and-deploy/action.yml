@@ -1,0 +1,15 @@
+name: Middleman Build and Deploy Action
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+inputs:
+  TARGET_REPOSITORY:
+    required: false
+    default: ${{ github.repository }}
+  TARGET_BRANCH:
+    required: false
+    default: 'gh-pages'
+  GITHUB_TOKEN:
+    required: true

@@ -1,0 +1,9 @@
+= wrap_layout 'common' do
+  .container
+    .row
+      %main.col-12.py-3
+
+        - if current_page.data.title
+          %h1= current_page.data.title
+
+        = yield

@@ -1,0 +1,23 @@
+h2 {
+  border-bottom: 1px solid #dee2e6;
+}
+
+#toc {
+  float: right;
+  border: 1px solid #dee2e6;
+  padding: .5rem;
+  margin-left: .5rem;
+}
+
+.videoblock > .content {
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.right {
+  float: right !important;
+}
+
+.left {
+  float: left !important;
+}
