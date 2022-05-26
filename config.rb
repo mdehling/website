@@ -24,4 +24,7 @@ activate :blog do |blog|
 end
 
 
+activate :livereload
+
+
 activate :directory_indexes

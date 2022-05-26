@@ -1,0 +1,4 @@
+tasks:
+- init: bundle install
+ports:
+- port: 4567
