@@ -1,4 +1,6 @@
 tasks:
-- init: bundle install
+  - init: bundle install
+
 ports:
-- port: 4567
+  - port: 4567
+    onOpen: open-preview
