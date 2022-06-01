@@ -4,14 +4,14 @@
   - next_article = current_article.article_next
 
   - if prev_article
-    .mr-auto
+    .me-auto
       = link_to prev_article, class: "btn btn-outline-primary btn-sm" do
-        %i.fa.fa-chevron-left
+        %i.bi.bi-chevron-left
         = prev_article.title
 
   - if next_article
-    .ml-auto
+    .ms-auto
       = link_to next_article, class: "btn btn-outline-primary btn-sm" do
         = next_article.title
-        %i.fa.fa-chevron-right
+        %i.bi.bi-chevron-right
 

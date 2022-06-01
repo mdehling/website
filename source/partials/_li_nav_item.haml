@@ -1,4 +1,5 @@
-- if current_page.url =~ %r{^#{url_for(to)}}
-  %li.nav-item.active>= link_to "#{link}", "#{to}", class: "nav-link"
-- else
-  %li.nav-item>= link_to "#{link}", "#{to}", class: "nav-link"
+%li.nav-item
+  - if current_page.url =~ %r{^#{url_for(to)}}
+    = link_to "#{link}", "#{to}", class: "nav-link active"
+  - else
+    = link_to "#{link}", "#{to}", class: "nav-link"

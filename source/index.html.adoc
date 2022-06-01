@@ -1,4 +1,5 @@
 = Welcome
+Malte Dehling <mdehling@gmail.com>
 
-Welcome to my homepage!  There is not much to see here as of now, but that
-should change soon.
+Welcome to my website!  This is my attempt to organize my projects and
+thoughts for both my own benefit and, hopefully, that of others.
