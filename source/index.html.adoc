@@ -1,5 +1,17 @@
 = Welcome
 Malte Dehling <mdehling@gmail.com>
 
+:gh: https://github.com/mdehling
+
 Welcome to my website!  This is my attempt to organize my projects and
 thoughts for both my own benefit and, hopefully, that of others.
+
+As part of my interest in retrocomputing, I published a few firmware mods
+enabling high resolution LCD friendly video modes on old Sun Microsystems
+hardware: link:{gh}/sslx-vesa-mod[sslx-vesa-mod],
+link:{gh}/tgx-plus-vesa-mod[tgx-plus-vesa-mod],
+link:{gh}/cg14-vesa-mod[cg14-vesa-mod].  To aid in the reverse engineering
+required to do so, I wrote link:{gh}/fcode-tools[FCode tools].  I also
+maintain the link:{gh}/sun-fb-logos[Sun framebuffer logo collection], a
+project that has gained some popularity since it was shared on
+https://news.ycombinator.com/item?id=31403726[Hacker News] recently.
