@@ -1,9 +1,9 @@
 = About the Author
 Malte Dehling <mdehling@gmail.com>
 
-My name is Malte Dehling.  I was born in Boston, MA, raised in the
-Netherlands, and educated in Germany.  I have recently moved back to the US
-where I currently live in La Jolla, California.
+My name is Malte Dehling.  I was born in Boston, Massachusetts, raised in the
+Netherlands, and educated in Germany.  I have recently moved back to the
+United States where I currently live in La Jolla, California.
 
 I graduated _magna cum laude_ with a doctoral degree (_doctor rerum
 naturalium_) in mathematics from the University of Göttingen.  For my

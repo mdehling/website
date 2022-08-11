@@ -6,9 +6,20 @@ Malte Dehling <mdehling@gmail.com>
 Welcome to my website!  This is my attempt to organize my projects and
 thoughts for both my own benefit and, hopefully, that of others.
 
-As part of my interest in retrocomputing, I published a few firmware mods
-enabling high resolution LCD friendly video modes on old Sun Microsystems
-hardware: link:{gh}/sslx-vesa-mod[sslx-vesa-mod],
+Since finishing my PhD and deciding to leave the world of pure mathematics, I
+have become interested in machine learning.  I am currently reading a lot of
+articles on neural style transfer and, to make sure I fully understand the
+details, I have decided to implement these models in TensorFlow.  Have a look
+at my library link:{gh}/nstesia[nstesia] for the code, and see my repository
+link:{gh}/neural-style-transfer[neural-style-transfer] for some Jupyter
+notebooks explaining the mathematics behind the models and showing some
+examples of the style transfer models in action.
+
+Another interest of mine is (and has been for a long time) retrocomputing,
+particularly old scientific workstations.  As part of this interest, I have
+published a few firmware mods enabling high resolution LCD friendly video
+modes on old Sun Microsystems hardware:
+link:{gh}/sslx-vesa-mod[sslx-vesa-mod],
 link:{gh}/tgx-plus-vesa-mod[tgx-plus-vesa-mod],
 link:{gh}/cg14-vesa-mod[cg14-vesa-mod].  To aid in the reverse engineering
 required to do so, I wrote link:{gh}/fcode-tools[FCode tools].  I also
