@@ -1,18 +1,18 @@
 = wrap_layout 'common' do
-  .container
+  .container-lg
 
-    .row
-      .col-12.pt-3
+    .row.justify-content-center
+      .col-12.col-xl-10.col-xxl-9.pt-3
         = partial "partials/article_nav", locals: {article: current_article}
 
-    .row
-      %article.col-12.py-3
+    .row.justify-content-center
+      %article.col-12.col-xl-10.col-xxl-9.py-3
         %header
           %h1= current_article.title
           %p.text-secondary= current_article.date.strftime('%a, %b %e, %Y')
         = current_article.body
 
-    .row
-      .col-12.pb-3
+    .row.justify-content-center
+      .col-12.col-xl-10.col-xxl-9.pb-3
         = partial "partials/article_nav", locals: {article: current_article}
 
