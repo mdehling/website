@@ -1,6 +1,9 @@
 = About the Author
 Malte Dehling <mdehling@gmail.com>
 
+[.my-2.mt-sm-0.ms-sm-2.float-sm-end]
+image::portrait.jpeg[192,192]
+
 My name is Malte Dehling.  I was born in Boston, Massachusetts, raised in the
 Netherlands, and educated in Germany.  I have recently moved back to the
 United States where I currently live in La Jolla, California.

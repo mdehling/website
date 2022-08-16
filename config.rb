@@ -5,6 +5,7 @@ Haml::TempleEngine.disable_option_validator!
 
 
 set :layout, "page"
+set :images_dir, "images"
 
 
 activate :asciidoc do |asciidoc|
