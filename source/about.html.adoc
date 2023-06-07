@@ -1,6 +1,10 @@
 = About the Author
 Malte Dehling <mdehling@gmail.com>
 
+:goediss-8401:	https://dx.doi.org/10.53846/goediss-8401
+:uni-math-hp:	https://www.uni-math.gwdg.de/mdehling/
+:archived-hp:	https://web.archive.org/web/20220601042136/{uni-math-hp}
+
 [.my-2.mt-sm-0.ms-sm-2.float-sm-end]
 image::portrait.jpeg[192,192]
 
@@ -10,11 +14,11 @@ United States where I currently live in La Jolla, California.
 
 I graduated _magna cum laude_ with a doctoral degree (_doctor rerum
 naturalium_) in mathematics from the University of Göttingen.  For my
-https://dx.doi.org/10.53846/goediss-8401[dissertation] I did research on the
-homotopy theory for symmetric operads and homotopy Lie algebras, a topic I
-became interested in during my master's.  In case you're curious, head over to
-my old https://www.uni-math.gwdg.de/mdehling/[academic homepage] where I have
-published a few blog posts explaining my work.
+{goediss-8401}[dissertation] I did research on the homotopy theory for
+symmetric operads and homotopy Lie algebras, a topic I became interested in
+during my master's.  In case you're curious, head over to my old
+{archived-hp}[academic homepage] where I have published a few blog posts
+explaining my work.
 
 More recently I have become fascinated with machine learning, and I am
 currently looking for work in this field.
