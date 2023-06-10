@@ -1,0 +1,59 @@
+= Projects
+Malte Dehling <mdehling@gmail.com>
+
+:gh:            https://github.com/mdehling
+
+:netbsd-ml:     http://mail-index.netbsd.org
+:cg14-patches:  {netbsd-ml}/port-sparc/2021/11/07/msg002411.html
+
+:hn-fb-logos:   https://news.ycombinator.com/item?id=31403726
+
+////
+This page is an attempt to give an overview of some of my projects, and to
+explain how they are connected.
+////
+
+Recently, I've worked on a Python package for Neural Style Transfer which I
+call link:{gh}/nstesia[nstesia].  I started this project as a way to become
+more familiar with TensorFlow, and to test and solidify my understanding of
+the literature.  For a brief explanation and demonstration of some of the
+models I implemented, see these repositories:
+link:{gh}/johnson-fast-style-transfer[johnson-fast-style-transfer],
+link:{gh}/dumoulin-multi-style-transfer[dumoulin-multi-style-transfer],
+link:{gh}/ghiasi-arbitrary-style-transfer[ghiasi-arbitrary-style-transfer],
+and link:{gh}/kolkin-style-transport[kolkin-style-transport].
+
+A long-standing interest of mine has been in UNIX workstations, particularly
+those made my Sun Microsystems.  I have written a collection of tools
+(link:{gh}/fcode-tools[fcode-tools]) to aid in reverse engineering and
+modifying their firmware.  Using these tools, I've created firmware mods
+enabling high resolution LCD friendly VESA video modes for various
+framebuffers (graphics cards): the SPARCstation LX onboard CG6
+(link:{gh}/sslx-vesa-mod[sslx-vesa-mod]),
+the TGX+ SBUS expansion card (link:{gh}/tgx-plus-vesa-mod[tgx-plus-vesa-mod]),
+and the SPARCstation 10SX/20 onboard CG14
+(link:{gh}/cg14-vesa-mod[cg14-vesa-mod]).  Getting X11 to work on the modified
+CG14 required some changes to the `xf86-video-suncg14` driver--I've
+submitted the link:{cg14-patches}[necessary patches].
+
+I've always thought that the boot screen on a Sun workstation looked really
+cool with the little logo next to the banner.  During my work on the
+framebuffer firmware, I decided to start a collection of these logos
+(link:{gh}/sun-fb-logos[sun-fb-logos].)  This project turned out to be
+surprisingly popular: it was shared on link:{hn-fb-logos}[Hacker News], and
+since then people from all over the world, including several former employees
+of Sun Microsystems, have contacted me to contribute.
+
+I've written a simple Solaris 7/8 device driver for the Aurora Personality
+Chip (link:{gh}/apc-driver[apc-driver].)  The APC provides power management
+functions for the SPARCstation 4/5--the default target of the QEMU SPARC
+emulator.  Enabling this driver inside the virtual machine significantly
+reduces host CPU load, allowing me to run it on a laptop without draining the
+battery too quickly.
+
+Years ago I came into the possession of an IBM PS/2 P75 Portable--a briefcase
+shaped computer with a 10 inch orange gas plasma display.  After diving deep
+into the spec sheets I finally figured out how to get this to boot from a
+standard PC floppy drive.  I designed a little PCB to convert a PC drive to
+one suitable for the IBM PS/2 P70/P75
+(link:{gh}/p7x-floppy-adapter[p7x-floppy-adapter].)
