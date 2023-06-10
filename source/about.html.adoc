@@ -1,24 +1,23 @@
-= About the Author
+= About Me
 Malte Dehling <mdehling@gmail.com>
 
-:goediss-8401:	https://dx.doi.org/10.53846/goediss-8401
-:uni-math-hp:	https://www.uni-math.gwdg.de/mdehling/
-:archived-hp:	https://web.archive.org/web/20220601042136/{uni-math-hp}
+:archive-pfx:   https://web.archive.org/web/20220601042136
+:uni-math-hp:   {archive-pfx}/https://www.uni-math.gwdg.de/mdehling/
 
-[.my-2.mt-sm-0.ms-sm-2.float-sm-end]
-image::portrait.jpeg[192,192]
-
-My name is Malte Dehling.  I was born in Boston, Massachusetts, raised in the
-Netherlands, and educated in Germany.  I have recently moved back to the
+My name is Malte Dehling.  I was born in Boston, Massachusetts, but lived most
+of my life in the Netherlands and Germany.  I have recently moved back to the
 United States where I currently live in La Jolla, California.
 
-I graduated _magna cum laude_ with a doctoral degree (_doctor rerum
-naturalium_) in mathematics from the University of Göttingen.  For my
-{goediss-8401}[dissertation] I did research on the homotopy theory for
-symmetric operads and homotopy Lie algebras, a topic I became interested in
-during my master's.  In case you're curious, head over to my old
-{archived-hp}[academic homepage] where I have published a few blog posts
-explaining my work.
+I have a doctoral degree in mathematics from the University of Göttingen.  If
+you're curious what sort of research I did, head over to my old
+link:{uni-math-hp}[academic homepage] where I try to explain some of my work.
 
-More recently I have become fascinated with machine learning, and I am
-currently looking for work in this field.
+I've also been interested in coding and technology in general from a young
+age.  I first learned to program in QBasic but quickly moved on to Turbo
+Pascal with inline assembly for faster graphics.  These days my go to
+languages are C, Python, and Lua, but I'm familiar with quite a few others and
+generally love picking up new skills!  To see what I've been working on
+recently, have a look at my link:/projects[projects] page.
+
+When I'm not at my computer, I love to spend time outdoors, hiking, running,
+or cycling.
