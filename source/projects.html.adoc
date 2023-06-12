@@ -39,13 +39,13 @@ submitted the link:{cg14-patches}[necessary patches].
 I've always thought that the boot screen on a Sun workstation looked really
 cool with the little logo next to the banner.  During my work on the
 framebuffer firmware, I decided to start a collection of these logos
-(link:{gh}/sun-fb-logos[sun-fb-logos].)  This project turned out to be
+(link:{gh}/sun-fb-logos[sun-fb-logos]).  This project turned out to be
 surprisingly popular: it was shared on link:{hn-fb-logos}[Hacker News], and
 since then people from all over the world, including several former employees
 of Sun Microsystems, have contacted me to contribute.
 
 I've written a simple Solaris 7/8 device driver for the Aurora Personality
-Chip (link:{gh}/apc-driver[apc-driver].)  The APC provides power management
+Chip (link:{gh}/apc-driver[apc-driver]).  The APC provides power management
 functions for the SPARCstation 4/5--the default target of the QEMU SPARC
 emulator.  Enabling this driver inside the virtual machine significantly
 reduces host CPU load, allowing me to run it on a laptop without draining the
@@ -56,4 +56,4 @@ shaped computer with a 10 inch orange gas plasma display.  After diving deep
 into the spec sheets I finally figured out how to get this to boot from a
 standard PC floppy drive.  I designed a little PCB to convert a PC drive to
 one suitable for the IBM PS/2 P70/P75
-(link:{gh}/p7x-floppy-adapter[p7x-floppy-adapter].)
+(link:{gh}/p7x-floppy-adapter[p7x-floppy-adapter]).
