@@ -23,6 +23,12 @@ link:{gh}/dumoulin-multi-style-transfer[dumoulin-multi-style-transfer],
 link:{gh}/ghiasi-arbitrary-style-transfer[ghiasi-arbitrary-style-transfer],
 and link:{gh}/kolkin-style-transport[kolkin-style-transport].
 
+I've been a NetBSD user for a long time and have made minor contributions to
+various parts of the system.  Most recently I've written a small kernel module
+(link:{gh}/netbsd-tp-battery[netbsd-tp-battery]), which adds sysctl variables
+that let you control certain aspects of battery charging behavior on ThinkPad
+laptops, such as setting charging thresholds to extend battery life.
+
 A long-standing interest of mine has been in UNIX workstations, particularly
 those made my Sun Microsystems.  I have written a collection of tools
 (link:{gh}/fcode-tools[fcode-tools]) to aid in reverse engineering and
