@@ -28,7 +28,10 @@ various parts of the system.  Most recently I've written a small kernel module
 (link:{gh}/netbsd-thinkpad-battery[netbsd-thinkpad-battery]), which adds
 sysctl variables that let you control certain aspects of battery charging
 behavior on ThinkPad laptops, such as setting charging thresholds to extend
-battery life.
+battery life.  You might also be interested in my repository
+link:{gh}/netbsd-cgdzfsroot[netbsd-cgdzfsroot].  It contains the build files
+for an initial ramdisk with encrypted ZFS root pool support, as well as a
+patch for the `cgdconfig` utility to add ZFS verification.
 
 A long-standing interest of mine has been in UNIX workstations, particularly
 those made my Sun Microsystems.  I have written a collection of tools
