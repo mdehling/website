@@ -1,7 +1,14 @@
 = Contact
 Malte Dehling <mdehling@gmail.com>
 
-[#contact]
-email:: link:mailto:mdehling@gmail.com[mdehling@gmail.com]
-github:: link:https://github.com/mdehling[github.com/mdehling]
-twitter:: link:https://twitter.com/Malte_Dehling[@Malte_Dehling]
+
+If you have any questions, remarks, etc. about my website or projects, or if
+you just like to chat about common interests, please get in touch!
+
+|===
+| email | link:mailto:mdehling@gmail.com[mdehling@gmail.com]
+| telegram | link:https://t.me/mdehling[t.me/mdehling]
+| github | link:https://github.com/mdehling[github.com/mdehling]
+| twitter | link:https://twitter.com/Malte_Dehling[@Malte_Dehling]
+| linkedin | link:https://linkedin.com/in/malte-dehling/[linkedin.com/in/malte-dehling]
+|===
