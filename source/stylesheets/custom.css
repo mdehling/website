@@ -14,3 +14,7 @@ dt {
 dd {
     margin-left: 2rem;
 }
+
+p.tableblock {
+    margin-bottom: 0.5rem;
+}
