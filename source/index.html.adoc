@@ -13,7 +13,7 @@ Malte Dehling <mdehling@gmail.com>
 ++++
 <div class="imageblock my-2 mt-sm-0 ms-sm-2 float-sm-end">
   <div class="content">
-    <img src="/images/portrait.jpeg" class="rounded-circle"
+    <img src="/images/portrait.jpeg" class="rounded-circle mx-auto d-block"
       alt="Portrait of Malte Dehling by Vincent van Gogh"
     />
   </div>
