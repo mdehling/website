@@ -8,44 +8,87 @@ Malte Dehling <mdehling@gmail.com>
 
 :hn-fb-logos:   https://news.ycombinator.com/item?id=31403726
 
-////
-This page is an attempt to give an overview of some of my projects, and to
-explain how they are connected.
-////
 
-Recently, I've worked on a Python package for Neural Style Transfer which I
-call link:{gh}/nstesia[nstesia].  I started this project as a way to become
-more familiar with TensorFlow, and to test and solidify my understanding of
-the literature.  For a brief explanation and demonstration of some of the
-models I implemented, see these repositories:
-link:{gh}/johnson-fast-style-transfer[johnson-fast-style-transfer],
-link:{gh}/dumoulin-multi-style-transfer[dumoulin-multi-style-transfer],
-link:{gh}/ghiasi-arbitrary-style-transfer[ghiasi-arbitrary-style-transfer],
-and link:{gh}/kolkin-style-transport[kolkin-style-transport].
+On this page I give a brief overview of some of my projects.  Most of the
+links below will take you to my github, which is where you'll find more
+detailed information about each project.
 
-I've been a NetBSD user for a long time and have made minor contributions to
-various parts of the system.  Most recently I've written a small kernel module
-(link:{gh}/netbsd-thinkpad-battery[netbsd-thinkpad-battery]), which adds
-sysctl variables that let you control certain aspects of battery charging
-behavior on ThinkPad laptops, such as setting charging thresholds to extend
-battery life.  You might also be interested in my repository
-link:{gh}/netbsd-cgdzfsroot[netbsd-cgdzfsroot].  It contains the build files
-for an initial ramdisk with encrypted ZFS root pool support, as well as a
-patch for the `cgdconfig` utility to add ZFS verification.
 
-A long-standing interest of mine has been in UNIX workstations, particularly
-those made my Sun Microsystems.  I have written a collection of tools
-(link:{gh}/fcode-tools[fcode-tools]) to aid in reverse engineering and
-modifying their firmware.  Using these tools, I've created firmware mods
-enabling high resolution LCD friendly VESA video modes for various
-framebuffers (graphics cards): the SPARCstation LX onboard CG6
-(link:{gh}/sslx-vesa-mod[sslx-vesa-mod]),
-the TGX+ SBUS expansion card (link:{gh}/tgx-plus-vesa-mod[tgx-plus-vesa-mod]),
-and the SPARCstation 10SX/20 onboard CG14
-(link:{gh}/cg14-vesa-mod[cg14-vesa-mod]).  Getting X11 to work on the modified
-CG14 required some changes to the `xf86-video-suncg14` driver--I've
-submitted the link:{cg14-patches}[necessary patches].
+Machine Learning
+----------------
+Recently, I've worked on a Python package for neural style transfer that I
+call link:{gh}/nstesia[NSTesia].  I started this project to become more
+familiar with TensorFlow, and to test and solidify my understanding of the
+literature.  These are some of the style transfer algorithms I implemented:
 
+link:{gh}/johnson-fast-style-transfer[johnson-fast-style-transfer]::
+  A pre-trained neural network is employed to compute a style vector for a
+  given style image.  This vector is then used to train a style transfer
+  network to turn arbitrary content images into stylized images (pastiches).
+link:{gh}/dumoulin-multi-style-transfer[dumoulin-multi-style-transfer]::
+  Style vectors are computed for a small number of style images instead of
+  just a single one.  A style transfer network is trained to turn arbitrary
+  content images into pastiches in any (mix) of the given styles.
+link:{gh}/ghiasi-arbitrary-style-transfer[ghiasi-arbitrary-style-transfer]::
+  A style transfer network is trained on pairs of style and content images to
+  produce stylized versions of images in previously unseen styles.
+link:{gh}/kolkin-style-transport[kolkin-style-transport]::
+  A iterative approach to style transfer based on methods of optimal
+  transport.
+
+
+NetBSD
+------
+I've been a long-time user of NetBSD and have made minor contributions to
+various parts of the system.
+
+link:{gh}/netbsd-thinkpad-battery[netbsd-thinkpad-battery]::
+A small kernel module that adds sysctl variables allowing the user to set
+charging thresholds, inhibit charging, or force discharge ThinkPad batteries
+in order to extend their battery lifespan.
+
+link:{gh}/netbsd-cgdzfsroot[netbsd-cgdzfsroot]::
+An initial ramdisk with encrypted ZFS root pool support, as well as a patch
+for the `cgdconfig` utility to add ZFS verification.
+
+
+Sun OpenBoot Firmware
+---------------------
+I was introduced to Unix workstations in 2002 and have been fascinated by them
+ever since.  From that first Ultra 80, I've always had a particular interest
+in Sun Microsystems.  These days I own a small collection.
+
+The default resolution of Sun workstations for the longest time was 1152x900,
+an awkward mode when trying to use LCD displays.  Luckily the hardware is
+quite flexible and with a few modifications to the firmware it can be
+convinced to produce high-resolution LCD-friendly VESA video modes.
+
+link:{gh}/fcode-tools[fcode-tools]::
+  A collection of tools I wrote to aid in reverse engineering and modifying
+  OpenBoot device firmware.
+
+link:{gh}/sslx-vesa-mod[sslx-vesa-mod]::
+  With this mod, the SPARCstation LX onboard CG6 framebuffer will generate
+  resolutions up to 1600x1200 or 1920x1080.  The repository also contains an
+  explanation of how to reprogram the ICS1562M pixel clock generator chip.
+
+link:{gh}/tgx-plus-vesa-mod[tgx-plus-vesa-mod]::
+  The Sun TGX+ framebuffer is very similar but has 4MB of VRAM, enough to
+  increase the resolution to 1920x1200 or even 2560x1600.  This repository
+  also contains an explanation of how to load firmware over the network in
+  testing.
+
+link:{gh}/cg14-vesa-mod[cg14-vesa-mod]::
+  The SPARCstation 10SX/20 onboard CG14 is a 24-bit capable framebuffer with
+  up to 8MB VRAM.  It can display the same resolutions as the TGX+ in
+  double-buffered mode, or up to 1600x1200 or 1920x1080 in 24-bit true color.
+  Getting X11 to work on a modified CG14 required some changes to the
+  `xf86-video-suncg14` driver for which I submitted the
+  link:{cg14-patches}[necessary patches].
+
+
+The Sun Framebuffer Logo Collection
+-----------------------------------
 I've always thought that the boot screen on a Sun workstation looked really
 cool with the little logo next to the banner.  During my work on the
 framebuffer firmware, I decided to start a collection of these logos
@@ -54,16 +97,36 @@ surprisingly popular: it was shared on link:{hn-fb-logos}[Hacker News], and
 since then people from all over the world, including several former employees
 of Sun Microsystems, have contacted me to contribute.
 
-I've written a simple Solaris 7/8 device driver for the Aurora Personality
-Chip (link:{gh}/apc-driver[apc-driver]).  The APC provides power management
+
+SPARC Emulation
+---------------
+I wrote a simple Solaris 7/8 device driver for the Aurora Personality Chip
+(link:{gh}/apc-driver[apc-driver]).  The APC provides power management
 functions for the SPARCstation 4/5--the default target of the QEMU SPARC
 emulator.  Enabling this driver inside the virtual machine significantly
 reduces host CPU load, allowing me to run it on a laptop without draining the
 battery too quickly.
 
-Years ago I came into the possession of an IBM PS/2 P75 Portable--a briefcase
-shaped computer with a 10 inch orange gas plasma display.  After diving deep
-into the spec sheets I finally figured out how to get this to boot from a
-standard PC floppy drive.  I designed a little PCB to convert a PC drive to
-one suitable for the IBM PS/2 P70/P75
-(link:{gh}/p7x-floppy-adapter[p7x-floppy-adapter]).
+
+Hardware
+--------
+While I am more comfortable with software, I have done a couple of minor
+hardware projects, too.
+
+link:{gh}/p7x-floppy-adapter[p7x-floppy-adapter]::
+  Long ago I came into the possession of an IBM PS/2 P75 Portable, a briefcase
+  shaped computer with a 10 inch orange gas plasma display.  After diving deep
+  into the spec sheets I finally figured out how to get it to boot from a
+  standard PC floppy drive.  I designed a little PCB to convert a PC drive to
+  one suitable for the IBM PS/2 P70/P75.
+
+link:{gh}/m48txx-battery-fix[m48txx-battery-fix]::
+  Certain Sun SPARCstations use M48TXX NVRAM chips to store their mac address,
+  serial number, and other configuration.  These chips have a builtin battery
+  which fails eventually.  This little PCB provides a clean solution to the
+  issue.
+
+link:{gh}/vs3100-scsi-terminator[vs3100-scsi-terminator]::
+  Replacement for the proprietary, hard to find, and expensive SCSI terminator
+  required to run a VAXstation 3100.  I know it looks like regular wide SCSI,
+  but it really is not!

@@ -1,9 +1,35 @@
 = Welcome
 Malte Dehling <mdehling@gmail.com>
 
-Welcome to my website!  This is my attempt to organize my projects and
-thoughts for both my own benefit and, hopefully, that of others.  (Also, I
+////
+// I don't think there is a way to apply a class to the <img> tag currently,
+// so I'll just use html passthrough until I get around to writing a custom
+// block.
+//
+//[.my-2.mt-sm-0.ms-sm-2.float-sm-end]
+//image::portrait.jpeg[]
+////
+
+++++
+<div class="imageblock my-2 mt-sm-0 ms-sm-2 float-sm-end">
+  <div class="content">
+    <img src="/images/portrait.jpeg" class="rounded-circle"
+      alt="Portrait of Malte Dehling by Vincent van Gogh"
+    />
+  </div>
+</div>
+++++
+
+Welcome to my personal website!  This is my attempt to organize my projects
+and thoughts for both my own benefit and, hopefully, that of others.  (Also, I
 just needed a domain for my servers...)
 
-To see what I've been working on recently, have a look at my
-link:/projects[projects] page.
+This is what's on the menu:
+
+[.site-index]
+link:/projects[Projects]::
+An overview of some of the projects I've been working on recently.
+link:/about[About]::
+Information about who I am.
+link:/contact[Contact]::
+Ways to get in touch with me.

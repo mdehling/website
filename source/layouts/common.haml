@@ -18,6 +18,8 @@
     - if current_page.data.stem
       = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-svg.min.js", integrity: "sha512-lod3aTRkO5OUBZDRwWaaIGYAT6+2uSyrlwnj0sg1h9a1w5wJ7NnzkaiUWy4Jv5wdf1ixGX35HK6u7fP1pjYOQw==", crossorigin: "anonymous"
 
+    = stylesheet_link_tag "custom.css"
+
   %body
 
     %nav.navbar.navbar-expand-sm.navbar-light.bg-light.border-bottom
@@ -28,11 +30,11 @@
           %span.navbar-toggler-icon
         #navbarContent.collapse.navbar-collapse
           %ul.navbar-nav.ms-auto
-            -#= partial "partials/li_nav_item",
-            -#  locals: {link: "Blog", to: "/blog/"}
             = partial "partials/li_nav_item",
               locals: {link: "Projects", to: "/projects/"}
             = partial "partials/li_nav_item",
               locals: {link: "About", to: "/about/"}
+            = partial "partials/li_nav_item",
+              locals: {link: "Contact", to: "/contact/"}
 
     = yield

@@ -1,0 +1,16 @@
+h3 {
+    font-size: 1.25rem;
+//    margin-bottom: 0.5rem;
+}
+
+dl {
+//    padding-left: 2rem;
+}
+
+dt {
+    font-weight: normal;
+}
+
+dd {
+    margin-left: 2rem;
+}

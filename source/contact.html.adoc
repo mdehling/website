@@ -1,0 +1,7 @@
+= Contact
+Malte Dehling <mdehling@gmail.com>
+
+[#contact]
+email:: link:mailto:mdehling@gmail.com[mdehling@gmail.com]
+github:: link:https://github.com/mdehling[github.com/mdehling]
+twitter:: link:https://twitter.com/Malte_Dehling[@Malte_Dehling]
