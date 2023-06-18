@@ -20,13 +20,10 @@ Malte Dehling <mdehling@gmail.com>
 </div>
 ++++
 
-Welcome to my personal website!  This is my attempt to organize my projects
-and thoughts for both my own benefit and, hopefully, that of others.  (Also, I
-just needed a domain for my servers...)
+Hi, my name is Malte Dehling.  Welcome to my personal website!
 
 This is what's on the menu:
 
-[.site-index]
 link:/projects[Projects]::
 An overview of some of the projects I've been working on recently.
 link:/about[About]::
