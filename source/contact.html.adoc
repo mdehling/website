@@ -5,6 +5,7 @@ Malte Dehling <mdehling@gmail.com>
 If you have any questions, remarks, etc. about my website or projects, or if
 you just like to chat about common interests, please get in touch!
 
+[cols="2,3"]
 |===
 | email | link:mailto:mdehling@gmail.com[mdehling@gmail.com]
 | telegram | link:https://t.me/mdehling[t.me/mdehling]
