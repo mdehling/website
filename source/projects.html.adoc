@@ -3,6 +3,8 @@ Malte Dehling <mdehling@gmail.com>
 
 :gh:            https://github.com/mdehling
 
+:micrograd:     https://github.com/karpathy/micrograd
+
 :netbsd-ml:     http://mail-index.netbsd.org
 :cg14-patches:  {netbsd-ml}/port-sparc/2021/11/07/msg002411.html
 
@@ -25,6 +27,10 @@ link:{gh}/johnson-fast-style-transfer[johnson-fast-style-transfer]::
   A pre-trained neural network is employed to compute a style vector for a
   given style image.  This vector is then used to train a style transfer
   network to turn arbitrary content images into stylized images (pastiches).
+link:{gh}/johnson-fast-style-transfer-pytorch[johnson-fast-style-transfer-pytorch]::
+  Another implementation of Johnson's style transfer model, this time using
+  PyTorch.  Uses Hydra for simple training configuration.  Pre-trained models
+  for various styles made available via torch hub.
 link:{gh}/dumoulin-multi-style-transfer[dumoulin-multi-style-transfer]::
   Style vectors are computed for a small number of style images instead of
   just a single one.  A style transfer network is trained to turn arbitrary
@@ -35,6 +41,12 @@ link:{gh}/ghiasi-arbitrary-style-transfer[ghiasi-arbitrary-style-transfer]::
 link:{gh}/kolkin-style-transport[kolkin-style-transport]::
   A iterative approach to style transfer based on methods of optimal
   transport.
+
+Other ML related projects I have been working on include the following:
+
+link:{gh}/milligrad[milligrad]::
+  A basic tensor/backprop and neural networks package built on top of NumPy.
+  Essentially a vectorized version of Karpathy's link:{micrograd}[micrograd].
 
 
 NetBSD
