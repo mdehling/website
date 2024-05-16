@@ -2,6 +2,9 @@
 Malte Dehling <mdehling@gmail.com>
 
 :gh:            https://github.com/mdehling
+:nb-pr:		https://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number
+:fb-nbc:	https://freshbsd.org/netbsd/src/commit
+:pkgsrc:	https://pkgsrc.org/
 
 :micrograd:     https://github.com/karpathy/micrograd
 
@@ -11,9 +14,50 @@ Malte Dehling <mdehling@gmail.com>
 :hn-fb-logos:   https://news.ycombinator.com/item?id=31403726
 
 
-On this page I give a brief overview of some of my projects.  Most of the
-links below will take you to my github, which is where you'll find more
-detailed information about each project.
+On this page I give a brief overview of some of my personal projects and open
+source projects I'm involved in.  Most of the links below will take you to my
+github, which is where you'll find more detailed information about each
+project.
+
+
+NetBSD
+------
+I've been a long-time user of NetBSD and run it on a wide range of hardware
+(sparc, mips, vax, i386, amd64, aarch64, ...)  Over the years I have made
+minor contributions to various parts of the system.  Some more recent ones
+include the following:
+
+link:{gh}/netbsd-src/tree/mdehling_cgdconfig[cgdconfig-zfs]::
+  Added zfs verification to the cryptographic disk driver configuration
+  utility cgdconfig(8).  This allows using raw cgd devices as vdevs in a zfs
+  pool without requiring an intermediate disklabel or partition table.
+  (link:{nb-pr}=58212[PR #58212], link:{fb-nbc}/l8DqFN0POdK6MJ9F[committed].)
+
+link:{gh}/netbsd-cgdzfsroot[netbsd-cgdzfsroot]::
+  An initial ramdisk with encrypted ZFS root pool support.  Using this ramdisk
+  it is possible to set up a system in such a way that the only unencrypted
+  data is the UEFI boot partition and all persistent file systems are ZFS.
+
+link:{gh}/netbsd-src/tree/mdehling_thinkpad[netbsd-thinkpad-battery]::
+  Adds sysctl tunables allowing the user to set charging thresholds, inhibit
+  charging, or force discharge ThinkPad batteries in order to extend their
+  battery lifespan.
+
+link:{gh}/netbsd-src/tree/mdehling_acpibat[netbsd-acpibat]::
+  Adds sysctl tunables for control method batteries implementing the ACPI
+  battery maintenance data (_BMD) and control (_BMD) methods.  I don't have
+  the hardware to test this, so feedback is welcome.
+
+link:{gh}/netbsd-src[netbsd-autofs]::
+  I am currently working on getting nested automounting to work.  While the
+  new (FreeBSD) autofs automounter is in many ways better than the previous
+  Berkeley implementation, lack of nested automounting is a serious regression
+  and needs to be fixed.
+
+In addition, I also contribute to link:{pkgsrc}[pkgsrc], a cross platform
+package management system and NetBSD's default package manager.  I maintain a
+number of packages, among them are: LuaJIT{2,21,-git}, neovim-git, neatroff-*,
+RE/flex, 8bc, py-notmuch2, py-lieer, and others.
 
 
 Machine Learning
@@ -47,21 +91,6 @@ Other ML related projects I have been working on include the following:
 link:{gh}/milligrad[milligrad]::
   A basic tensor/backprop and neural networks package built on top of NumPy.
   Essentially a vectorized version of Karpathy's link:{micrograd}[micrograd].
-
-
-NetBSD
-------
-I've been a long-time user of NetBSD and have made minor contributions to
-various parts of the system.
-
-link:{gh}/netbsd-thinkpad-battery[netbsd-thinkpad-battery]::
-A small kernel module that adds sysctl variables allowing the user to set
-charging thresholds, inhibit charging, or force discharge ThinkPad batteries
-in order to extend their battery lifespan.
-
-link:{gh}/netbsd-cgdzfsroot[netbsd-cgdzfsroot]::
-An initial ramdisk with encrypted ZFS root pool support, as well as a patch
-for the `cgdconfig` utility to add ZFS verification.
 
 
 Sun OpenBoot Firmware
