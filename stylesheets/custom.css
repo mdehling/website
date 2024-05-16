@@ -1,0 +1,22 @@
+h1 {
+    padding: 0.5rem;
+    background-color: var(--bs-light);
+    border: 2px solid var(--bs-secondary);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    border-bottom: 2px solid var(--bs-secondary);
+}
+
+dt {
+    font-weight: normal;
+}
+
+dd {
+    margin-left: 2rem;
+}
+
+p.tableblock {
+    margin-bottom: 0.5rem;
+}

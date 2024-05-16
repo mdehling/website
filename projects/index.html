@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<title>
+Malte Dehling
+
+</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" integrity="sha256-rzXMaro05QBd53CZ36ctTBp3FdKN3Ow0P0gDHcjLCLw=" crossorigin="anonymous" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<link href="/stylesheets/custom.css" rel="stylesheet" />
+</head>
+<body>
+<nav class='navbar navbar-expand-sm navbar-light bg-light border-bottom border-2 border-secondary'>
+<div class='container-fluid'>
+<a href="/" class="navbar-brand">Malte Dehling</a>
+<button class='navbar-toggler' data-bs-target='#navbarContent' data-bs-toggle='collapse'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse' id='navbarContent'>
+<ul class='navbar-nav ms-auto'>
+<li class='nav-item'>
+<a href="/projects/" class="nav-link active">Projects</a>
+</li>
+
+<li class='nav-item'>
+<a href="/about/" class="nav-link">About</a>
+</li>
+
+<li class='nav-item'>
+<a href="/contact/" class="nav-link">Contact</a>
+</li>
+
+</ul>
+</div>
+</div>
+</nav>
+<div class='container-lg'>
+<div class='row justify-content-center'>
+<main class='col-12 col-xl-10 col-xxl-9 py-3'>
+<h1>Projects</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>On this page I give a brief overview of some of my personal projects and open
+source projects I&#8217;m involved in.  Most of the links below will take you to my
+github, which is where you&#8217;ll find more detailed information about each
+project.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_netbsd">NetBSD</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I&#8217;ve been a long-time user of NetBSD and run it on a wide range of hardware
+(sparc, mips, vax, i386, amd64, aarch64, &#8230;&#8203;)  Over the years I have made
+minor contributions to various parts of the system.  Some more recent ones
+include the following:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/mdehling/netbsd-src/tree/mdehling_cgdconfig">cgdconfig-zfs</a></dt>
+<dd>
+<p>Added zfs verification to the cryptographic disk driver configuration
+utility cgdconfig(8).  This allows using raw cgd devices as vdevs in a zfs
+pool without requiring an intermediate disklabel or partition table.
+(<a href="https://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=58212">PR #58212</a>, <a href="https://freshbsd.org/netbsd/src/commit/l8DqFN0POdK6MJ9F">committed</a>.)</p>
+</dd>
+<dt class="hdlist1"><a href="https://github.com/mdehling/netbsd-cgdzfsroot">netbsd-cgdzfsroot</a></dt>
+<dd>
+<p>An initial ramdisk with encrypted ZFS root pool support.  Using this ramdisk
+it is possible to set up a system in such a way that the only unencrypted
+data is the UEFI boot partition and all persistent file systems are ZFS.</p>
+</dd>
+<dt class="hdlist1"><a href="https://github.com/mdehling/netbsd-src/tree/mdehling_thinkpad">netbsd-thinkpad-battery</a></dt>
+<dd>
+<p>Adds sysctl tunables allowing the user to set charging thresholds, inhibit
+charging, or force discharge ThinkPad batteries in order to extend their
+battery lifespan.</p>
+</dd>
+<dt class="hdlist1"><a href="https://github.com/mdehling/netbsd-src/tree/mdehling_acpibat">netbsd-acpibat</a></dt>
+<dd>
+<p>Adds sysctl tunables for control method batteries implementing the ACPI
+battery maintenance data (_BMD) and control (_BMD) methods.  I don&#8217;t have
+the hardware to test this, so feedback is welcome.</p>
+</dd>
+<dt class="hdlist1"><a href="https://github.com/mdehling/netbsd-src">netbsd-autofs</a></dt>
+<dd>
+<p>I am currently working on getting nested automounting to work.  While the
+new (FreeBSD) autofs automounter is in many ways better than the previous
+Berkeley implementation, lack of nested automounting is a serious regression
+and needs to be fixed.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>In addition, I also contribute to <a href="https://pkgsrc.org/">pkgsrc</a>, a cross platform
+package management system and NetBSD&#8217;s default package manager.  I maintain a
+number of packages, among them are: LuaJIT{2,21,-git}, neovim-git, neatroff-*,
+RE/flex, 8bc, py-notmuch2, py-lieer, and others.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_machine_learning">Machine Learning</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Recently, I&#8217;ve worked on a Python package for neural style transfer that I
+call <a href="https://github.com/mdehling/nstesia">NSTesia</a>.  I started this project to become more
+familiar with TensorFlow, and to test and solidify my understanding of the
+literature.  These are some of the style transfer algorithms I implemented:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/mdehling/johnson-fast-style-transfer">johnson-fast-style-transfer</a></dt>
+<dd>
+<p>A pre-trained neural network is employed to compute a style vector for a
+given style image.  This vector is then used to train a style transfer
+network to turn arbitrary content images into stylized images (pastiches).</p>
+</dd>
+<dt class="hdlist1"><a href="https://github.com/mdehling/johnson-fast-style-transfer-pytorch">johnson-fast-style-transfer-pytorch</a></dt>
+<dd>
+<p>Another implementation of Johnson&#8217;s style transfer model, this time using
+PyTorch.  Uses Hydra for simple training configuration.  Pre-trained models
+for various styles made available via torch hub.</p>
+</dd>
+<dt class="hdlist1"><a href="https://github.com/mdehling/dumoulin-multi-style-transfer">dumoulin-multi-style-transfer</a></dt>
+<dd>
+<p>Style vectors are computed for a small number of style images instead of
+just a single one.  A style transfer network is trained to turn arbitrary
+content images into pastiches in any (mix) of the given styles.</p>
+</dd>
+<dt class="hdlist1"><a href="https://github.com/mdehling/ghiasi-arbitrary-style-transfer">ghiasi-arbitrary-style-transfer</a></dt>
+<dd>
+<p>A style transfer network is trained on pairs of style and content images to
+produce stylized versions of images in previously unseen styles.</p>
+</dd>
+<dt class="hdlist1"><a href="https://github.com/mdehling/kolkin-style-transport">kolkin-style-transport</a></dt>
+<dd>
+<p>A iterative approach to style transfer based on methods of optimal
+transport.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Other ML related projects I have been working on include the following:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/mdehling/milligrad">milligrad</a></dt>
+<dd>
+<p>A basic tensor/backprop and neural networks package built on top of NumPy.
+Essentially a vectorized version of Karpathy&#8217;s <a href="https://github.com/karpathy/micrograd">micrograd</a>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sun_openboot_firmware">Sun OpenBoot Firmware</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I was introduced to Unix workstations in 2002 and have been fascinated by them
+ever since.  From that first Ultra 80, I&#8217;ve always had a particular interest
+in Sun Microsystems.  These days I own a small collection.</p>
+</div>
+<div class="paragraph">
+<p>The default resolution of Sun workstations for the longest time was 1152x900,
+an awkward mode when trying to use LCD displays.  Luckily the hardware is
+quite flexible and with a few modifications to the firmware it can be
+convinced to produce high-resolution LCD-friendly VESA video modes.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/mdehling/fcode-tools">fcode-tools</a></dt>
+<dd>
+<p>A collection of tools I wrote to aid in reverse engineering and modifying
+OpenBoot device firmware.</p>
+</dd>
+<dt class="hdlist1"><a href="https://github.com/mdehling/sslx-vesa-mod">sslx-vesa-mod</a></dt>
+<dd>
+<p>With this mod, the SPARCstation LX onboard CG6 framebuffer will generate
+resolutions up to 1600x1200 or 1920x1080.  The repository also contains an
+explanation of how to reprogram the ICS1562M pixel clock generator chip.</p>
+</dd>
+<dt class="hdlist1"><a href="https://github.com/mdehling/tgx-plus-vesa-mod">tgx-plus-vesa-mod</a></dt>
+<dd>
+<p>The Sun TGX+ framebuffer is very similar but has 4MB of VRAM, enough to
+increase the resolution to 1920x1200 or even 2560x1600.  This repository
+also contains an explanation of how to load firmware over the network in
+testing.</p>
+</dd>
+<dt class="hdlist1"><a href="https://github.com/mdehling/cg14-vesa-mod">cg14-vesa-mod</a></dt>
+<dd>
+<p>The SPARCstation 10SX/20 onboard CG14 is a 24-bit capable framebuffer with
+up to 8MB VRAM.  It can display the same resolutions as the TGX+ in
+double-buffered mode, or up to 1600x1200 or 1920x1080 in 24-bit true color.
+Getting X11 to work on a modified CG14 required some changes to the
+<code>xf86-video-suncg14</code> driver for which I submitted the
+<a href="http://mail-index.netbsd.org/port-sparc/2021/11/07/msg002411.html">necessary patches</a>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_sun_framebuffer_logo_collection">The Sun Framebuffer Logo Collection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I&#8217;ve always thought that the boot screen on a Sun workstation looked really
+cool with the little logo next to the banner.  During my work on the
+framebuffer firmware, I decided to start a collection of these logos
+(<a href="https://github.com/mdehling/sun-fb-logos">sun-fb-logos</a>).  This project turned out to be
+surprisingly popular: it was shared on <a href="https://news.ycombinator.com/item?id=31403726">Hacker News</a>, and
+since then people from all over the world, including several former employees
+of Sun Microsystems, have contacted me to contribute.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sparc_emulation">SPARC Emulation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I wrote a simple Solaris 7/8 device driver for the Aurora Personality Chip
+(<a href="https://github.com/mdehling/apc-driver">apc-driver</a>).  The APC provides power management
+functions for the SPARCstation 4/5&#8212;&#8203;the default target of the QEMU SPARC
+emulator.  Enabling this driver inside the virtual machine significantly
+reduces host CPU load, allowing me to run it on a laptop without draining the
+battery too quickly.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hardware">Hardware</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>While I am more comfortable with software, I have done a couple of minor
+hardware projects, too.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/mdehling/p7x-floppy-adapter">p7x-floppy-adapter</a></dt>
+<dd>
+<p>Long ago I came into the possession of an IBM PS/2 P75 Portable, a briefcase
+shaped computer with a 10 inch orange gas plasma display.  After diving deep
+into the spec sheets I finally figured out how to get it to boot from a
+standard PC floppy drive.  I designed a little PCB to convert a PC drive to
+one suitable for the IBM PS/2 P70/P75.</p>
+</dd>
+<dt class="hdlist1"><a href="https://github.com/mdehling/m48txx-battery-fix">m48txx-battery-fix</a></dt>
+<dd>
+<p>Certain Sun SPARCstations use M48TXX NVRAM chips to store their mac address,
+serial number, and other configuration.  These chips have a builtin battery
+which fails eventually.  This little PCB provides a clean solution to the
+issue.</p>
+</dd>
+<dt class="hdlist1"><a href="https://github.com/mdehling/vs3100-scsi-terminator">vs3100-scsi-terminator</a></dt>
+<dd>
+<p>Replacement for the proprietary, hard to find, and expensive SCSI terminator
+required to run a VAXstation 3100.  I know it looks like regular wide SCSI,
+but it really is not!</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body>
+</html>
